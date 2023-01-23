@@ -1,6 +1,6 @@
 package com.First.testing.collection;
 import org.junit.jupiter.api.*;
-import com.First.testing.collection.OddNumberExterminator
+import com.First.testing.collection.OddNumberExterminator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,26 +9,38 @@ public class CollectionTasteSuite {
 
     @Test
     void testOddNumbersExterminatorEmptyList() {
-        List<Integer> emptyList = new List<Integer>;
-
-     OddNumberExterminator oddNumberExterminator;
-        oddNumberExterminator = new OddNumberExterminator();
-
-        oddNumberExterminator.exterminate(emptyList);
-
+        //Given
+        List<Integer> emptyList = new ArrayList<>();
+         OddNumberExterminator oddNumberExterminator = new OddNumberExterminator();
+        //When
+        List<Integer> result = oddNumberExterminator.exterminate(emptyList);
+        System.out.println("Testing empty list");
+        //Then
+        Assertions.assertEquals(emptyList, result);
     }
 
     @Test
     void testOddNumbersExterminatorNormalList() {
-        List<Integer> emptyList = new List<Integer>;
-       for (int i=1, i<10; i++){
-            emptyList.add(i);
+        OddNumberExterminator oddNumberExterminator = new OddNumberExterminator();
+        List<Integer> normaList = new ArrayList<>();
+       for (int i=1; i<=10; i++){
+            normaList.add(i);
         }
 
-        OddNumberExterminator oddNumberExterminator;
-        oddNumberExterminator = new OddNumberExterminator();
+       List<Integer> expectedResult = new ArrayList<>();
+       expectedResult.add(2);
+       expectedResult.add(4);
+       expectedResult.add(6);
+       expectedResult.add(8);
+       expectedResult.add(10);
 
-        oddNumberExterminator.exterminate(emptyList);
+        //When
+        List<Integer> result = oddNumberExterminator.exterminate(normaList);
+        System.out.println("Testing norma list");
+
+        //Then
+
+        Assertions.assertEquals(expectedResult, result);
 
     }
 }

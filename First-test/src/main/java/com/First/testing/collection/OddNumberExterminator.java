@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class OddNumberExterminator {
-    List<Integer> numbers = new ArrayList<>();
+    public List<Integer> numbers = new ArrayList<>();
+
 
     public OddNumberExterminator(List<Integer> numbers) {
         this.numbers = numbers;
@@ -13,13 +14,13 @@ public class OddNumberExterminator {
     public List<Integer> exterminate(List<Integer> numbers){
         List<Integer> outList = new ArrayList<>();
         for (int reciveNumber : numbers) {
-            if (reciveNumber % 2 == 0) {
+            if (reciveNumber % 2 == 0)
+
                 outList.add(reciveNumber);
 
             }
         }
-        exterminate().add(outList);
-
+        return outList;
     }
 
 }
