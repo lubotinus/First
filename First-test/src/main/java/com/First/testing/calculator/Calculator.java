@@ -7,11 +7,13 @@ public class Calculator {
         this.a = a;
         this.b = b;
     }
-    public void add() {
-        System.out.println(a + b);
+    public int add() {
+        int resA = a + b;
+        return resA;
     }
 
-    public void subtract() {
-        System.out.println(a-b);
+    public int subtract() {
+        int resS = a-b;
+        return resS;
     }
 }
