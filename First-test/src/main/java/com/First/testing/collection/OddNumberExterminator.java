@@ -4,19 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class OddNumberExterminator {
-    public List<Integer> numbers = new ArrayList<>();
+    public List<Integer> inputList = new ArrayList<>();
 
 
-    public OddNumberExterminator(List<Integer> numbers) {
-        this.numbers = numbers;
+    public OddNumberExterminator(List<Integer> inputList) {
+        this.inputList = inputList;
     }
 
     public List<Integer> exterminate(List<Integer> numbers){
         List<Integer> outList = new ArrayList<>();
-        for (int reciveNumber : numbers) {
-            if (reciveNumber % 2 == 0)
-
-                outList.add(reciveNumber);
+        for (int i=0; i<numbers.size(); i++) {
+            if (numbers.get(i) % 2 == 0){
+                int n = numbers.get(i);
+                outList.add(n);
 
             }
         }
